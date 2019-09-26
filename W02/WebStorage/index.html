@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>Product ID</td>
+            <td> <input id="tbProductID" type="text"></td>
+        </tr>
+        <tr>
+            <td>Product name</td>
+            <td><input id="tbProductName" type="text"></td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td><input id="tbProductQuantity" type="number"></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input id="tbProductPrice" type="number"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <button onclick="onClickAddToCart()" class="main_btn_m hvr-underline-from-left_m">Add to cart</button>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <p id="pTotalProduct">Total product: </p>
+        <p id="pTotalPrice">Total price: </p>
+    </p>
+    <h3>Receipt</h3>
+    <table id="tbReceipt">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./scripts/main.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+#tbReceipt {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tbReceipt td,
+#tbReceipt th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tbReceipt tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tbReceipt tr:hover {
+    background-color: #ddd;
+}
+
+#tbReceipt th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.main_btn_m {
+    float: right;
+    display: block;
+    text-decoration: none;
+    background: #2f5289;
+    color: #eeeeee;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .7s;
+    letter-spacing: 1px;
+}
+
+.main_btn_m span {
+    float: left;
+}
+
+.main_btn_m:hover {
+    background: #2c3339;
+    color: #ffffff;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.hvr-underline-from-left_m {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-left_m:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #FEC55A;
+    height: 3px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left_m:hover:before,
+.hvr-underline-from-left_m:focus:before,
+.hvr-underline-from-left_m:active:before {
+    right: 0;
+}

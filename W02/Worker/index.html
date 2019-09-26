@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    Number 1:
+    <input type="text" id="tbNum1" onchange="postNewMessage()" />
+    <br />
+    Number 2:
+    <input type="text" id="tbNum2" onchange="postNewMessage()" />
+    <br />
+    <p id="lbResult">Result = </p>
+    <button onclick="onClickAdd()">Add</button>
+    <button onclick="onClickTerminate()">Terminate</button>
+    <script type="text/javascript">
+        var worker = new Worker("scripts/add_worker.js");
+        var tbNum1 = document.getElementById("tbNum1");
+        var tbNum2 = document.getElementById("tbNum2");
+        var lbResult = document.getElementById("lbResult");
+        function onClickAdd() {
+            if (typeof (worker) != undefined && worker != null) {
+                worker.onmessage = function (event) {
+                    console.log(event);
+                    lbResult.innerHTML = "Result = " + event.data;
+                }
+            }
+            else {
+                alert("This browser does not support Worker");
+            }
+        }
+        function postNewMessage() {
+            if (typeof (worker) != undefined && worker != null) {
+                worker.postMessage([parseFloat(tbNum1.value), parseFloat(tbNum2.value)]);
+            }
+        }
+        function onClickTerminate() {
+            if (worker != null) {
+                worker.terminate();
+                worker = null;
+                alert("Terminated");
+            }
+        }
+    </script>
+</body>
+
+</html>
